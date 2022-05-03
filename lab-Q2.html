@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Bar Graph</title>
+    <style>
+        h1 {
+            margin: top;
+            text-align: center;
+        }
+
+        p {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .bar-graph {
+            display: block;
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 10%;
+            padding: 1em;
+            background-color: whitesmoke;
+        }
+        .bars{
+            display: flex;
+            flex-direction: row;
+        }
+        .bar {
+            display: inline-block;
+            width: 30px;
+            height: 300px;
+            margin: 1cm;
+            background-color: darkgray;
+        }
+
+        .outer-bar {
+            display: inline-block
+        }
+
+        .inner-bar {
+            height: 300px;
+            background-color: white;
+        }
+
+        #bar1 .inner-bar {
+            animation-name: a1;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        #bar2 .inner-bar {
+            animation-name: a2;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        #bar3 .inner-bar {
+            animation-name: a3;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes a1 {
+            from {
+                height: 100%;
+            }
+
+            to {
+                height: 70%;
+            }
+        }
+
+        @keyframes a2 {
+            from {
+                height: 100%;
+            }
+
+            to {
+                height: 60%;
+            }
+        }
+
+        @keyframes a3 {
+            from {
+                height: 100%;
+            }
+
+            to {
+                height: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bar-graph">
+        <div class="bars">
+            <div class="outer-bar">
+                <div class="bar" id="bar1">
+                    <div class="inner-bar"></div>
+                </div>
+                <p>30%</p>
+            </div>
+            <div class="outer-bar">
+                <div class="bar" id="bar2">
+                    <div class="inner-bar"></div>
+                </div>
+                <p>40%</p>
+            </div>
+            <div class="outer-bar">
+                <div class="bar" id="bar3">
+                    <div class="inner-bar"></div>
+                </div>
+                <p>80%</p>
+            </div>
+        </div>
+        <h1>Bar Plot</h1>
+    </div>
+</body>
+
+</html>
